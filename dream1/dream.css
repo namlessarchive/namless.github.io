@@ -1,0 +1,98 @@
+/* This is for the button styling of the Dream pages */
+
+/* RIGHT BUTTON */
+.buttonR{
+	background:url(rightarrow.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:88px;
+	height:143px;
+	position: absolute;
+	left: 1380px;
+	top: 250px;
+}
+
+.buttonR:hover {
+  transform: translateX(-2px);
+}
+
+.buttonR:active {
+  transform: translateX(2px);
+}
+
+/* LEFT BUTTON */
+.buttonL{
+	background:url(leftarrow.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:88px;
+	height:143px;
+	position: absolute;
+	right: 1380px;
+	top: 250px;
+}
+
+.buttonL:hover {
+  transform: translateX(-2px);
+}
+
+.buttonL:active {
+  transform: translateX(2px);
+}
+
+/* DOWN BUTTON */
+.buttonD{
+	background:url(downarrow.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:143px;
+	height:88px;
+	position: absolute;
+	left: 650px;
+	top: 600px;
+}
+
+.buttonD:hover {
+  transform: translateY(-2px);
+}
+
+.buttonD:active {
+  transform: translateY(2px);
+}
+
+/* Doors */
+.housedoor{
+	background:url(housedoor.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:331px;
+	height:500px;
+	position: absolute;
+	left: 650px;
+	top: 40px;
+}
+
+.housedoor:hover {
+	border: 2px solid gray;
+	border-color: gray;
+}
+
+/* ITEMS */
+.crystal{
+	background:url(crystal.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:300px;
+	height:300px;
+	position: absolute;
+	left: 850px;
+	top: 275px;
+}
+
+.crystal:hover {
+
+}
+
+.housedoor:active {
+  border:none;
+}

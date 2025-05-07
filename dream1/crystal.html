@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="shortcut icon" tyep+"x-icon" href="assets/icon.png"
+		<meta charset="utf-8">
+		<meta name="viewport" content="width+device-width, initial-scale=1">
+		<title>Was that a good idea?</title>
+    <style type="text/css">
+     @keyframes scroll {
+       from { background-position: 0px 0px; }
+       to { background-position: -3000px 3000px;}
+     }
+     body {
+       font-family: 'Tinos', serif;
+	   font-size: 30px;
+	   color: white;
+       background-image: url(night.jpg);
+       animation: scroll 10s infinite linear;
+        .backstretch {
+  width: 100%;
+  height: 100%;
+  background-image: url('night.jpg');
+   position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+  
+.backstretch.animated {
+  -webkit-animation: filter-animation 1s infinite;
+  animation: filter-animation 1s infinite, scroll 30s infinite linear;
+}
+ #wrapper {
+            width: 600px;
+            height: 600px;
+        }
+        
+        #logo, #wrapper {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+		
+        .floaterdesc {
+            position: absolute;
+            color: white;
+            word-wrap: break-word;
+            width: 19em
+            
+        }
+		
+        #burger2 {
+            float: right;
+            top: 150px;
+            right: 0px;
+        }     
+    </style>
+
+<audio autoplay loop>
+  <source src="dreamnmore.mp3" type="audio/mpeg">
+</audio>
+
+
+</head>
+<body>	
+	<div id="wrapper">
+        <span class="floaterdesc"><center><p>
+        <b>Somethings off...</b>
+        </p></center></span>
+        </div>
+	<div id="wrapper">
+        <span class="floaterdesc" id="burger2"><center><p>
+        <b>What Now?</b><br><br>
+        <a style="cursor: pointer" onclick="javascript: window.location = 'cookarea.html';">RUN BACK</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a style="cursor: pointer" onclick="javascript: window.location = 'nextdream.html';">Keep Dreaming</a>
+        </p></center></span>
+        </div>
+</body>
+</html>	
