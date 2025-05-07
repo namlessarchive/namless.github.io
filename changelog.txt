@@ -1,0 +1,19 @@
+1.0
+- Added Version view at bottom of page.
+
+1.0.1
+- Editded Chars.html
+- Added LANCER.html
+
+1.1
+- Added lancer folder
+- edited chars.html (redirects to /lancer)
+- Added map.html
+
+1.1.1
+- Added more map features
+
+1.2
+- edited all files outside folders
+- edited classic home.html
+- added humblewood

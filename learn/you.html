@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="shortcut icon" tyep+"x-icon" href="assets/icon.png"
+		<meta charset="utf-8">
+		<meta name="viewport" content="width+device-width, initial-scale=1">
+		<title>Outside</title>
+	<link rel="stylesheet" type="text/css" href="dream.css" />
+	<style>
+body {
+    font-family: 'Tinos', serif;
+        background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -o-background-size: 100% 100%, auto;
+    -moz-background-size: 100% 100%, auto;
+    -webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;
+    margin:0;
+}
+    div {
+height: 100vh;}
+</style>
+
+
+<style>
+        p {
+            font-size: 30px;
+            color: white;
+        }
+		/* Scrollbar styles, Button, Background*/
+		* {
+			scrollbar-color: #000000 #000000;
+		}
+
+		::-webkit-scrollbar {
+			background: #000000;
+			width: 8px;
+			height: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #000000;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #000000;
+			border-radius: 10px;
+		}
+</style>
+</head>
+<body>	
+<!-- NEXT BUTTON TEXT -->
+<center><br/><br/><br/><br/><br/>
+	<div id="container">
+		<h1 id="storytitle"></h1>
+		<p id="storycontent"></p>
+		<input type="button" id="btn_prev" value="Previous" />
+		<input type="button" id="btn_next" value="Next" />
+</div></center>
+<script>
+var btn_next = document.getElementById("btn_next");
+var btn_prev = document.getElementById("btn_prev");
+var story_title = document.getElementById("storytitle");
+var story_content = document.getElementById("storycontent");
+var curr_page = 1;
+var story = [
+  {
+    title: "",
+    text: "Not even I know who I am."
+  },
+  {
+    title: "",
+    text: "Maybe someone does."
+  },
+  {
+    title: "",
+    text: "It will take years to find out."
+  },
+  {
+    title: "",
+    text: "Alas, such a journey."
+  },
+  {
+    title: "",
+    text: "Will leave me <b>Nameless</b>."
+  }
+];
+btn_prev.addEventListener("click", navigatePage);
+btn_next.addEventListener("click", navigatePage);
+// Fire it once to populate the content
+navigatePage();
+
+function navigatePage(el){
+  // Control the navigation by only allowing increment within range
+  if (el != null){
+    switch (el.target.getAttribute("id")){
+      case "btn_next":
+        if (curr_page < story.length){
+          curr_page++;
+        }
+        break;
+      case "btn_prev":
+        if (curr_page > 1){
+          curr_page--;
+        }
+        break;
+      default: break;
+    }
+  }
+  
+  // Set the title and text to the current page contents
+  // Arrays are zero-indexed, so "1" is actually "0", and so on
+  story_title.innerHTML = story[curr_page - 1].title;
+  story_content.innerHTML = story[curr_page - 1].text;
+
+  // Show or hide nav buttons based on the current page
+  // The following syntax is basically just a fancy "if-then" done in one line
+  btn_prev.style.display = (curr_page > 1 ? "inline-block" : "none");
+  btn_next.style.display = (curr_page < story.length ? "inline-block" : "none");
+}
+</script>
+</body>
+</html>	
+

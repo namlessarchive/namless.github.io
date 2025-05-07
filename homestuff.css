@@ -1,0 +1,357 @@
+.landtitle {
+  position: absolute;
+  top: 100px;
+  font-size: 50px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 0 0 7px rgba(225, 196, 196, 0.8);
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #212121;
+  align-items: center;
+  justify-content: center;
+}
+
+#stars {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+}
+
+#sun {
+  position: absolute;
+  transform: rotate(180deg);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.floor {
+  position: absolute;
+  z-index: -10;
+  inset: 0;
+  background-image: linear-gradient(
+      to right,
+      rgb(139, 255, 235) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(139, 255, 235) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(200px) rotateX(80deg);
+  mask-image: radial-gradient(at 50% 100%, black, transparent 40%);
+  background-position: 0px 0px;
+  animation: move-background 2s linear infinite;
+}
+
+@keyframes move-background {
+  to {
+    background-position: 0 40px;
+  }
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  margin: 0 15px;
+  background-color: #212121aa;
+  padding: 8px 24px;
+  color: white;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.5s ease;
+  transform: skewX(0);
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0 0 5px 3px black;
+  max-height: 50px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  isolation: isolate;
+  width: calc(100% - 30px);
+  height: calc(100% - 15px);
+  left: 50%;
+  top: 50%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  animation: flicker 5s ease infinite;
+}
+
+@keyframes flicker {
+  2.5%,
+  5%,
+  8%,
+  12%,
+  15%,
+  18.5% {
+    opacity: 0;
+  }
+
+  4.5%,
+  7.5%,
+  10%,
+  15%,
+  23% {
+    opacity: 1;
+  }
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 15px);
+  height: calc(100% - 30px);
+  left: 50%;
+  top: 50%;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  animation: flicker 5s ease infinite;
+}
+
+button:hover {
+  border: 1px solid rgb(255, 125, 242);
+  text-shadow: 0 0 2px rgb(255 255 255 / 0.8);
+  box-shadow: 0 0 5px 1px rgba(255, 161, 246, 0.5);
+  transform: skewX(-10deg);
+  color:white;
+}
+
+button:hover::before {
+  width: calc(100% + 30px);
+  height: calc(100% + 15px);
+}
+
+button:active:before {
+  width: calc(100% + 40px);
+  height: calc(100% + 45px);
+}
+
+button:hover::after {
+  width: calc(100% + 15px);
+  height: calc(100% + 30px);
+}
+
+button:active:after {
+  width: calc(100% + 60px);
+  height: calc(100% + 25px);
+}
+
+.balken {
+  position: absolute;
+  inset: 5px;
+  z-index: -10;
+  height: 0px;
+  background-color: #a80309;
+  box-shadow: 0 0 8px 2px #a80309eb;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+button:active .balken {
+  background-color: rgb(251, 188, 116);
+  box-shadow: 0 0 8px 2px rgba(255, 230, 139, 0.4);
+}
+
+.balken-2 {
+  top: 25px;
+}
+
+.balken-3 {
+  top: 37px;
+}
+
+button:hover .balken {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button:hover .balken-1 {
+  height: 18px;
+}
+
+button:hover .balken-2 {
+  height: 10px;
+}
+
+button:hover .balken-3 {
+  height: 5px;
+}
+
+/*NAMLESS BUTON*/
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 50px;
+} 
+ 
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+} 
+ 
+.btn-text-stretch {
+  letter-spacing: 0px;
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: lato, serif;
+} 
+ 
+.btn-text-stretch:hover {
+  letter-spacing: 5px;
+} 
+ 
+.btn-text-stretch::before {
+  backface-visibility: hidden;
+  border: 1.5px solid transparent;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  width: 0px;
+} 
+ 
+.btn-text-stretch:hover::before {
+  backface-visibility: hidden;
+  transition: width 0.5s ease-in-out;
+  width: 70%;
+  bottom: auto;
+  top: 0px;
+  width: 70%;
+} 
+ 
+.btn-text-stretch--gray {
+  color: rgb(255, 255, 255);
+} 
+ 
+.btn-text-stretch--gray:hover::before {
+  border-color: rgb(255, 255, 255);
+} 
+/*HUMBLEWOOD BUTTON*/
+
+.wild-west-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 50px;
+  margin: 15px;
+  padding: 20px 30px;
+  font-size: 24px;
+  color: #f1dabb;
+  background: linear-gradient(45deg, #8b4513, #a0522d);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wild-west-button::before {
+  opacity: 0.3;
+}
+
+.wild-west-button:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wild-west-button:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.3),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wild-west-button__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wild-west-button__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  fill: #f1dabb;
+  transition: transform 0.3s ease;
+}
+
+.wild-west-button:hover .wild-west-button__icon {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.wild-west-button::after {
+  content: "";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 50px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: wild-west-button-shine 3s linear infinite;
+}
+
+@keyframes wild-west-button-shine {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}

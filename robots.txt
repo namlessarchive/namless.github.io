@@ -1,0 +1,6 @@
+# Hello, this is the Nameless project's robots.txt file!
+# I'd rather put a gun in my mouth then help google or openAI
+# If you would like to train models based on this site's content, please see the following: https://youtu.be/bQPiqsqSkYA
+
+User-agent: *
+Disallow: /
