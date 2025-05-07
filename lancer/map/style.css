@@ -1,0 +1,84 @@
+#container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  //border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stars1 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  //border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slide {
+  display: block;
+  position: absolute;
+  height: 200px !important;
+  width: 200px !important;
+  background: red;
+}
+
+/* Planet Stuff */
+.cradle {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background: url('cradle.png');
+  border:none;
+  cursor:pointer;
+}
+
+.cres {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background: url('cres.png');
+  border:none;
+  cursor:pointer;
+}
+
+
+/* Body and Scrollbar */
+body {
+	background-image: url('Nebula Blue.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* Scrollbar styles, Button, Background*/
+* {
+    scrollbar-color: #a80309 #333;
+}
+
+::-webkit-scrollbar {
+    background: #fff;
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cd7c00;
+    border-radius: 10px;
+}
+/* Heading stuff */
+h1 {
+  color: #fff;
+  font-family: monospace;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
